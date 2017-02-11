@@ -1,0 +1,72 @@
+body,html{
+	height:100%;
+}
+
+.main{
+	height: 100%;
+	width: 100%;
+	background-image: url("./picture/sign.png");
+	background-repeat: no-repeat;
+	padding-top: 114px;
+	background-size: cover;
+}
+
+.container{
+	width: 341px;
+	height: 418px;
+	background-color: #f8bb69;
+	position: absolute;
+	right: 210px;
+	top: 50%;
+	margin-top: -209px;
+}
+
+.auth_btn{
+	width:50px;
+	font-size: 24px;
+	display: inline-block;
+	background:none;
+
+}
+
+.registerButton{
+	margin-right:15px;
+}
+
+.loginButton{
+}
+
+.btnbox{
+	margin-top: 70px;
+	width:115px;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:0;
+}
+.Input{
+	display: block;
+	width: 281px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 49px;
+}
+
+.usernameInput{
+	margin-top: 38px;
+}
+
+.passwordInput{
+	margin-top: 16px;
+
+}
+
+.submitButton{
+	width: 283px;
+	height: 49px;
+    margin-left: 28px;
+    margin-top: 20px;
+	background-color: #27c5af;
+	color: #ffffff;
+	font-size: 24px;
+    font-family: "PingFang SC";
+}
