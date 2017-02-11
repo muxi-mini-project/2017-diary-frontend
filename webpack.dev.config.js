@@ -4,7 +4,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
-        'main.js': ['./src/main.js', 'webpack-hot-middleware/client']
+        'auth.js': ['./src/auth.js', 'webpack-hot-middleware/client'],
+        vendor: ["Backbone", "underscore", "jquery", "./src/style.scss"]
     },
     output: {
         path: '/',
@@ -12,16 +13,22 @@ module.exports = {
         filename: '[name]'
     },
     devtool: '#eval-source-map',
-    resolve: {
-        extensions: ['', '.js'],
+    module: {
+        loaders: [{
+          test: /\.scss$/,
+          loaders: ["style", "css", "sass"]
+        },
+        {
+          test: /\.html$/,
+          loader: "html-loader"
+        }]
     },
-    loaders: [{
-      test: /\.scss$/,
-      loaders: ["style", "css", "sass"]
-    }],
+    resolve: {
+        extensions: ['', '.js','.scss'],
+    },
     plugins: [
-        new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
+        new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js")
     ]
 };
