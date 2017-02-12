@@ -23,6 +23,18 @@
 			"endpoint" : "/api/v1.0/register/",
 			"method" : "post",
 			"async" : true
+		},
+		{
+			"name" : "api.posts",
+			"endpoint" : "/api/v1.0/posts/",
+			"method" : "get",
+			"async" : true
+		},
+		{
+			"name" : "api.register",
+			"endpoint" : "/api/v1.0/register/",
+			"method" : "post",
+			"async" : true
 		}
 	],
 	"data":{
