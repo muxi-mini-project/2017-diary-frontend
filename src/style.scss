@@ -1,12 +1,18 @@
 @import './auth/auth.scss';
 @import './header.scss';
 @import './home.scss';
+@import './share.scss';
 
 body{
 	margin:0;
 	font-family: "PingFang SC";
+	background-color: #fafafa;
+	
 }
 button{
 	padding:0;
 	border:0;
+}
+a{
+	text-decoration: none;
 }

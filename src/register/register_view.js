@@ -8,36 +8,39 @@ var registerModel = require("./register_model.js");
 var register_view = Backbone.View.extend({
             template:_.template(template),
             initialize: function () {
-                this.model = new registerModel({})
+                this.model = new registerModel()
                 this.listenTo(this.model, "sync", this.OnRegister)
                 this.render();
             },
             events:{
                 "click .submitButton": "onSubmit"
             },
-            OnRegister: function(){
-                location.href = "/login"
-                alert("已发送激活邮件到注册邮箱")
-            },
-
             check:function(){
                 // check
-                if ( $(".usernameInput").val() == "" || $(".passwordInput").val() == "") {
-                    alert("请输入完整邮箱或密码");
+                if ( $(".emailInput").val() == "" || $(".usernameInput").val() == "" || $(".passwordInput").val() == "") {
+                    alert("请输入所有信息");
                     return false
                 }
-                else
+                else{
                     return true
+                }
             },
             onSubmit: function(e){
                 e.preventDefault();
                 if (this.check()) {
                     this.model.set("username",$(".usernameInput").val())
                     this.model.set("password",$(".passwordInput").val())
-
+                    this.model.set("email",$(".emailInput").val())
                     // start loading animation
 
-                    this.model.save()
+                    //get admin token
+                    var token = $(".adminToken").text()
+                    this.model.save({},{ 
+                        headers: {'Authorization' :'Basic '+token} 
+                    })
+                    .done(function(){
+                        alert("register success")
+                    })
                 }               
             },
             render: function(){

@@ -1,6 +1,3 @@
-body{
-	background-color: #fafafa;
-}
 .user{
 	height: 201px;
 	width: 224px;
@@ -26,10 +23,17 @@ body{
 	height: 56px;
     border-color: transparent;
 }
+.three{
+	/*position: relative;*/
+	width: 100%;
+	height: 50px;
+	margin-bottom: 0;
+	font-size: 0;
+}
 .number{
 	font-size: 16px;
 	color: #231f20;
-	width: 100%;
+	/*width: 100%;*/
 	display: inline-block;
 	margin-left: 40px;
 
@@ -38,8 +42,8 @@ body{
     margin-right: 38px;
     display: inline-block;
 }
-.following{
-	margin-right: 38px;
+.follow{
+    margin-left: -40px;
 	display: inline-block;
 }
 .follower{
@@ -48,8 +52,8 @@ body{
 .word{
 	font-size: 14px;
 	color: #818488;
-	width: 100%;
-	display: inline-block;
+	/*width: 100%;*/
+	/*display: inline-block;*/
 	margin-left: 35px;
 }
 
@@ -59,6 +63,9 @@ body{
 	margin-left: 17px;
 	float: left;
 	border: 1px solid #979797;
+}
+.oneDiary{
+	height: 600px;
 }
 .person{
 	margin-left: 16px;
@@ -71,7 +78,9 @@ body{
 .name{
 	margin-top: 31px;
 	margin-left: 8px;
-	display: inline-block;	
+	display: inline-block;
+	text-decoration: none;
+	color: #414243;	
 }
 .date{
 	margin-left: 73px;
@@ -124,9 +133,27 @@ body{
     float: left;
 	margin-left: 17px;
 }
-.find{
+.box{
 	margin-left: 12px;
 	margin-top: 10px;
-	font-size: 14px;
-	color: #5e6063；
+}
+.findWords{
+    font-size: 14px;
+	color: #5e6063;
+}
+.foll{
+	width: 36px;
+	height: 24px;
+	display: inline-block;
+	margin-left: 50px;
+	/*margin-top: ;*/
+	background-image: url('../src/picture/follow-btn.png');
+}
+.findpeople{
+    line-height: 40px;
+    color: #5e6063;
+    display: inline-block;
+}
+.newone{
+	height: 40px;
 }

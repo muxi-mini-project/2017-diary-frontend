@@ -1,8 +1,9 @@
 var registerModel = Backbone.Model.extend({
-	urlRoot : '/api/v1.0/register/',
+	urlRoot : '/api/v1.0/register',
 	defaults: {
     "username":  "",
-    "password":  ""
+    "password":  "",
+    "email": ""
   }
 });
 

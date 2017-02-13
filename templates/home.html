@@ -1,50 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 {% include "header.html" %}
-<div class="user">
-    <div class="user-top"></div>
-	<img class="portrait" src="http://p1.bqimg.com/4851/747fd6cea3aec310.png">
-	<div class="nickname">山中袋鼠</div>
-	<div class="number">
-	  <div class="diary">99</div>
-	  <div class="following">100</div>
-	  <div class="follower">101</div>
-	</div>
-	<div class="word">
-	  <div class="diary">日记</div>
-	  <div class="following">已关注</div>
-	  <div class="follower">关注</div>
+<div class="user"></div>
+<div class="diaContent"></div>
+<div class="discovery findWords">
+	<p class="box">发现</p>
+	<div class="newone">
+	<img src="http://p1.bqimg.com/4851/8a256258571ffca7.png" class="findPro">
+    <a href="/posts/" class="findpeople">天使之家</a>
+    <div class="foll"></div>
     </div>
-    </div>
-<div class="diaContent">
-    <img class="person" src="http://p1.bqimg.com/4851/8a256258571ffca7.png">
-    <div class="name">地心的三三</div>
-    <div class="date">2017.2.12</div>
-    <div class="day">我带车子，去看看</div>
-    <img src="http://p1.bqimg.com/4851/022195375959ebb2.png” class="photo">
-    <div>
-    <div class="like icon"></div>
-    <div class="likeNum">123</div>
 </div>
-<div>
-    <div class="comments icon"></div>
-    <div class="comNum">456</div>
-    </div>
- <a class="allCom" href="/edit_comments">查看全部评论</a> 
-
-    <form>
-    <input type="text" placeholder="评论" class="pocomm">
-    <input type="submit" name="Postcomm" value="提交">
-    </form>
-</div>
-</div>
-<div class="discovery">
-	<div class="find">发现</div>
-	  <hr style="width:100%">
-    <a href="/posts/??" class="people">
-    	<img src=""
-    </a>
-  <hr style="width:100%">
-
-</div>
+{% endblock %}
+{% block script %}
+<script type="text/javascript" src="/dist/home.js"></script>
 {% endblock %}

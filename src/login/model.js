@@ -1,10 +1,9 @@
 var loginModel = Backbone.Model.extend({
-	urlRoot : '/api/v1.0/login/',
+	urlRoot : '/api/v1.0/login',
 	defaults: {
-    "username":  "",
+    "email":  "",
     "password":  ""
   }
 });
 
 module.exports = loginModel
-

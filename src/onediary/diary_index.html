@@ -1,0 +1,20 @@
+<div class="oneDiary">
+    <img class="person" src="http://p1.bqimg.com/4851/8a256258571ffca7.png">
+    <a class="name" href="/posts/"></a>
+    <div class="date"><%= timestamp %></div>
+    <div class="day"><%= body %></div>
+    <img class="photo" src=<%= picture %>>
+    <div>
+    <div class="like icon"></div>
+    <div class="likeNum">0</div>
+</div>
+<div>
+    <div class="comments icon"></div>
+    <div class="comNum"><%= comment_count %></div>
+  </div>
+ <a class="allCom" href="/edit_comments">查看全部评论</a>
+    <form>
+    <input type="text" placeholder="评论" class="pocomm">
+    <input type="submit" name="Postcomm" value="提交">
+    </form>
+</div>

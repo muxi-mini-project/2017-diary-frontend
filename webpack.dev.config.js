@@ -5,6 +5,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     entry: {
         'auth.js': ['./src/auth.js', 'webpack-hot-middleware/client'],
+        'home.js': ['./src/home.js', 'webpack-hot-middleware/client'],
+        'share.js': ['./src/share.js', 'webpack-hot-middleware/client'],
         vendor: ["Backbone", "underscore", "jquery", "./src/style.scss"]
     },
     output: {

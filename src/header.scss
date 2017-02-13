@@ -17,25 +17,30 @@
 .img{
 	width: 32px;
 	height: 32px;
-    margin-left: 42px;
-    margin-top: 12px;
+    /*margin-left: 42px;
+    margin-top: 12px;*/
+    float: right;
+    margin-top: 11px;
     /*top: 50%;
 	margin-top: -16px;
 	position: absolute;*/
 	/*display: inline-block;*/
 }
 .homepage{
-	margin-left:760px;
-	width: 32px;
-	height: 32px;
-    display: inline-block;
+	/*margin-left:760px;*/
+	/*width: 32px;
+	height: 32px;*/
+    /*display: inline-block;*/
 	background-image: url("../src/picture/home.png");
+	margin-right: 42px;
 }
 .upload{
-    display: inline-block;
+    /*display: inline-block;*/
 	background-image: url("../src/picture/upload.png");
+	margin-right: 42px;
 }
 .discover{
-    display: inline-block;
+    /*display: inline-block;*/
 	background-image: url("../src/picture/discover.png");
+	margin-right: 150px;
 }

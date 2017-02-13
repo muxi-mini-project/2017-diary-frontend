@@ -3,7 +3,7 @@ var _ = require('underscore');
 var $  = require('jquery'); 
 var template =  require("./index.html");
 var loginModel = require("./model.js");
-
+var cookie = require("../cookie.js");
 var login_view = Backbone.View.extend({
             template:_.template(template),
             initialize: function () {
@@ -31,12 +31,15 @@ var login_view = Backbone.View.extend({
             onSubmit: function(e){
                 e.preventDefault();
                 if (this.check()) {
-                    this.model.set("username",$(".usernameInput").val())
+                    this.model.set("email",$(".usernameInput").val())
                     this.model.set("password",$(".passwordInput").val())
 
                     // start loading animation
 
-                    this.model.save()
+                    this.model.save().done(function(res){
+                        console.log(res)
+                        cookie.setCookie("token", res.token, 30)
+                    })
                 }               
             },
             render: function(){
